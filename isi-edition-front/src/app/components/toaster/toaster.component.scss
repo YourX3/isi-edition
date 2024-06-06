@@ -1,0 +1,22 @@
+@import 'variables';
+
+.toaster {
+  position: absolute;
+  display: flex;
+  bottom: 20px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+
+  .toast {
+    background-color: $primary-light-color;
+    box-shadow: 3px 3px 10px rgba(73, 106, 156, 0.788);
+    border-radius: 25px;
+    width: 300px;
+    padding: 10px 25px;
+    text-align: center;
+  }
+}

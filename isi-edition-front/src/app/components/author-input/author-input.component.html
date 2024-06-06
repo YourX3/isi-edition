@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Choix de l'auteur</h2>
+<mat-dialog-content>
+  <app-author-list [authors]="authors" [(selectedAuthor)]="selectedAuthor"></app-author-list>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="cancelClick()">Annuler</button>
+  <button mat-button [mat-dialog-close]="selectedAuthor" cdkFocusInitial>Selectionner</button>
+</mat-dialog-actions>

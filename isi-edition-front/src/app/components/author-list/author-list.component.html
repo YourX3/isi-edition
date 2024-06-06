@@ -1,0 +1,13 @@
+<div class="author-list">
+    @for(author of authors; track author.id) {
+      <div class="list-line author-line" (click)="selectAuthor(author)" [class]="{'selected': author === selectedAuthor}">
+        <img class="avatar" [img-src]="author.imageSrc" />
+        <div class="author-name">
+          {{author.firstName}}
+        </div>
+        <div class="author-lastname">
+          {{author.lastName | uppercase }}
+        </div>
+      </div>
+    }
+</div>

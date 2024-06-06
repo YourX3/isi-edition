@@ -1,0 +1,23 @@
+<div class="edit-book">
+  <h2>Édition du livre</h2>
+  <form class="book-form" [formGroup]="formGroup">
+    <app-image-input [(selectedImageSrc)]="imgSrc" type="book" />
+    <div>
+      <mat-form-field class="full-width">
+        <mat-label>Titre</mat-label>
+        <input required matInput placeholder="Titre du livre" formControlName="title">
+      </mat-form-field>
+      <div (click)="selectAuthor()">
+        <div>Auteur : {{ selectedAuthor ? selectedAuthor.firstName : 'non renseigné' }} {{ ' ' }} {{ selectedAuthor ? selectedAuthor.lastName : '' }}</div>
+        <button mat-button>Sélection de l'auteur</button>
+      </div>
+      <mat-form-field class="full-width">
+        <mat-label>Résumé</mat-label>
+        <textarea required matInput placeholder="Résumé du livre" formControlName="summary"></textarea>
+      </mat-form-field>
+    </div>
+    <button mat-flat-button color="primary" type="submit" [disabled]="!formGroup.valid" (click)="saveBook()">
+      Sauvegarder
+    </button>
+  </form>
+</div>

@@ -1,0 +1,15 @@
+<div class="book-view page-content">
+  <h1 class="page-header">Gestion des livres</h1>
+  <div class="columns">
+    <div class="left">
+      <button mat-flat-button color="primary" (click)="addBook()"><mat-icon fontIcon="add"></mat-icon>Ajouter</button>
+      <button mat-flat-button color="warn" (click)="deleteBook()"><mat-icon fontIcon="close"></mat-icon>Supprimer</button>
+      <div class="list" #list>
+        <app-book-list [books]="books" [selectedBook]="selectedBook" (selectedBookChange)="selectBook($event)" />
+      </div>
+    </div>
+    <div class="right">
+      <app-edit-book [book]="selectedBook" (save)="saveBook($event)" />
+    </div>
+  </div>
+</div>

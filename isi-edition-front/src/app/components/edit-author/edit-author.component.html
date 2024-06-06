@@ -1,0 +1,19 @@
+<div class="edit-author">
+  <h2>Édition de l'auteur</h2>
+  <form class="author-form" [formGroup]="formGroup" (ngSubmit)="saveAuthor()">
+    <app-image-input [(selectedImageSrc)]="imgSrc" />
+    <div class="input-line">
+      <mat-form-field>
+        <mat-label>Prénom</mat-label>
+        <input required matInput placeholder="Prénom de l'auteur"formControlName="firstName">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Nom</mat-label>
+        <input required matInput placeholder="Nom de l'auteur" formControlName="lastName">
+      </mat-form-field>
+    </div>
+    <button mat-flat-button color="primary" type="submit" [disabled]="!formGroup.valid">
+      Sauvegarder
+    </button>
+  </form>
+</div>

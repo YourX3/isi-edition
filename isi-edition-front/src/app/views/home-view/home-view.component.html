@@ -1,0 +1,8 @@
+<div class="background">
+  <app-home-title />
+  <app-card-slider>
+    @for(author of authors; track author.id) {
+      <app-author-card [author]="author" />
+    }
+  </app-card-slider>
+</div>

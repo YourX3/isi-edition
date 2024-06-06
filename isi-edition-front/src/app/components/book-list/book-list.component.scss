@@ -1,0 +1,15 @@
+.list-line {
+  justify-content: space-between;
+
+  .line-start {
+    display: flex;
+    display: flex;
+    align-items: center;
+  }
+  .book-author {
+    display: flex;
+    gap: 10px;
+    min-width: 150px;
+    justify-content: flex-end;
+  }
+}

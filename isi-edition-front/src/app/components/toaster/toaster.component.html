@@ -1,0 +1,7 @@
+<div class="toaster">
+  @for(toast of toastService.toasts.slice().reverse(); track toast) {
+    <div class="toast">
+      {{ toast.message }}
+    </div>
+  }
+</div>

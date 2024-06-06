@@ -1,0 +1,12 @@
+<div class="image-input">
+  <img (click)="imageSelection()" [img-src]="selectedImageSrc" [defaultImage]="type" [class]="type"/>
+  <input type="file" hidden accept="image/png, image/jpeg" #input (change)="imageSelected($event)"/>
+  @if(uploading) {
+    <mat-progress-bar class="progress-bar" mode="determinate"
+      [value]="uploadProgress">
+    </mat-progress-bar>
+  }
+  @else {
+    <button mat-button (click)="imageSelection()">Choisir une image</button>
+  }
+</div>

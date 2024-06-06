@@ -1,0 +1,15 @@
+<div class="author-view page-content">
+  <h1 class="page-header">Gestion des auteurs</h1>
+  <div class="columns">
+    <div class="left">
+      <button mat-flat-button color="primary" (click)="addAuthor()"><mat-icon fontIcon="add"></mat-icon>Ajouter</button>
+      <button mat-flat-button color="warn" (click)="deleteAuthor()"><mat-icon fontIcon="close"></mat-icon>Supprimer</button>
+      <div class="list" #list>
+        <app-author-list [authors]="authors" [selectedAuthor]="selectedAuthor" (selectedAuthorChange)="selectAuthor($event)" />
+      </div>
+    </div>
+    <div class="right">
+      <app-edit-author [author]="selectedAuthor" (save)="saveAuthor($event)" />
+    </div>
+  </div>
+</div>

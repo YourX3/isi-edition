@@ -1,0 +1,25 @@
+.image-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+  img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    &.book {
+      width: 200px;
+      height: 200px;
+      border-radius: 25px;
+    }
+  }
+
+  .progress-bar {
+    width: 200px;
+  }
+}

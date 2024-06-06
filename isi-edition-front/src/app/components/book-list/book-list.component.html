@@ -1,0 +1,20 @@
+<div class="book-list">
+  @for(book of books; track book.id) {
+    <div class="list-line book-line" (click)="selectBook(book)" [class]="{'selected': book === selectedBook}">
+      <div class="line-start">
+        <img class="avatar" [img-src]="book.imageSrc" defaultImage="book" />
+        <div class="book-title">
+          {{book.title}}
+        </div>
+      </div>
+      <div class="book-author">
+        <div class="first-name">
+          {{book.author?.firstName }}
+        </div>
+        <div class="last-name">
+          {{book.author?.lastName | uppercase }}
+        </div>
+      </div>
+    </div>
+  }
+</div>
